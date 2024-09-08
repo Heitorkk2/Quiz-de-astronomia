@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Para que?</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <style>
+        .question-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .image-container {
+            transition: transform 0.3s;
+        }
+        .image-container:hover {
+            transform: scale(1.2);
+        }
+        .answer-btn {
+            margin-top: 20px;
+        }
+    .btn-floating {
+        transition: transform 0.3s;
+    }
+
+    .btn-floating:hover {
+        transform: scale(1.5);
+    }
+
+    #alt1 {
+        width: 300px;
+    }
+
+    #alt2 {
+        width: 300px;
+    }
+
+    #alt3 {
+        width: 300px;
+    }
+
+    #alt4 {
+        width: 300px;
+    }
+
+    </style>
+</head>
+
+<body class="bg-dark col-12 col-xl-12 col-md-6 col-sm-12 ">
+
+    <header class="bg-dark col-12">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+           <div class="container text-center">
+               <a href="index.html" class="navbar-brand">
+                   <img src="images/logo.png" width="75" alt="">
+               </a>
+               <h6 class="d-sm-inline-flex align-items-center">QUIZ - Para que serve isso?</h6>
+           </div>
+       </nav>
+     </header>
+    <br>
+    <h2 style="color: azure; text-align: center;">Quiz nível fácil</h2>
+    <h1></h1>
+    <br>
+        <section id="corpo-do-site">
+            <div class="question-container text-bg-dark"  style="text-align: center; ">
+        
+                <div class="image-container">
+                    <img  id="oxd" src="" alt="Imagem" class="img-fluid" width="300">
+                    <br>
+                    <h1></h1>
+                    <br>
+        
+                </div>
+                <div id="divperg" class="answer-btn" style="text-align: center; ">
+                    <br>
+                    <h5  id="titulop" ></h5>
+                    <br>
+                    <button  onclick="resposta(opc[0])" id="alt1" type="submit"  class="btn btn-outline-light"></button>
+                    <br>
+                    <h6></h6>
+                    <button  onclick="resposta(opc[1])" id="alt2" type="submit"  class="btn btn-outline-light"></button>
+                    <br>
+                    <h6></h6>
+                    <button  onclick="resposta(opc[2])" id="alt3" type="submit"  class="btn btn-outline-light"></button>
+                    <br>
+                    <h6></h6>
+                    <button  onclick="resposta(opc[3])" id="alt4" type="submit"  class="btn btn-outline-light"></button>
+                    <br>  
+                </div>
+                <div id="opacidade" >
+                    <div id="resp" class="card mx-auto bg-dark" style="width: 300px; border: 0; display: none;">
+                        <div class="card-header" id="acertou?" style="color: aliceblue; border: 0;">
+                          Featured
+                        </div>
+                        <div class="card-body" style="color: aliceblue;" >
+                          <h5 class="card-title">Explicação:</h5>
+                          <p class="card-text" id="explicacao">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary" onclick="proxPerg()">Próxima Pergunta</a>
+                        </div>
+                    </div>  
+            
+                    <div id="fimquiz" class="card" style="display: none; color: black;">
+                        <div class="card-header">
+                            <a   class="btn btn-outline-dark" href="index.html">mudar dificuldade</a>
+                        </div>
+                        <div class="card-body">
+                          <h5 id="acertos" class="card-title"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <br>
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Seu conteúdo de rodapé aqui -->
+        <div class="text-center p-3" style="background-color: rgb(255, 255, 255);">
+            <div class="container p-4">
+                <section class="mb-4" >
+                  <!--  <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#"
+                        role="button"><i class="fa fa-twitter"></i></a>
+                    <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#"
+                        role="button"><i class="fa fa-google"></i></a>-->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="https://www.instagram.com/infinity_aerospace1/"
+                        role="button"><i class="fa fa-instagram"></i></a>
+                    <!--<a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="#"
+                        role="button"><i class="fa fa-github"></i></a>-->
+                </section>
+            </div>
+                
+              <a class="text-dark" href="#">2023 - Infinity Aeropace</a>
+            </div>
+ 
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="js do site aq/facil.js"></script>
+</body>
+</html>
